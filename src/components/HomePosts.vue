@@ -57,12 +57,12 @@ export default {
         }
     },
     created() {
-        axios.get("http://localhost:8000/")
+        axios.get("https://o-blog-api.herokuapp.com/")
         .then(response => {
             this.posts = response.data
         });
 
-        axios.get("http://localhost:8000/categories/")
+        axios.get("https://o-blog-api.herokuapp.com/categories/")
         .then(response => {
             this.categories = response.data
         })

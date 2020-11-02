@@ -143,7 +143,7 @@ export default {
         }
     },
     created() {
-        axios.get(`http://localhost:8000/post/${this.slug}/`)
+        axios.get(`https://o-blog-api.herokuapp.com/post/${this.slug}/`)
         .then(response => {
             this.post = response.data.result
             this.comments = this.post.comments
@@ -154,7 +154,7 @@ export default {
     },
     methods: {
         addComment() {
-            axios.post("http://localhost:8000/comment", {
+            axios.post("https://o-blog-api.herokuapp.com/comment", {
                 name: this.name,
                 text: this.text,
                 post: this.post.id

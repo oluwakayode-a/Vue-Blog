@@ -146,7 +146,7 @@ export default {
         }
     },
     created() {
-        axios.get("http://localhost:8000/")
+        axios.get("https://o-blog-api.herokuapp.com/")
         .then(response => {
             this.posts = response.data.filter(post => post.is_featured === true)
         })

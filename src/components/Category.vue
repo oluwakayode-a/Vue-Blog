@@ -42,7 +42,7 @@ export default {
         }
     },
     created() {
-        axios.get(`http://localhost:8000/category/${this.slug}/`)
+        axios.get(`https://o-blog-api.herokuapp.com/${this.slug}/`)
         .then(response => {
             this.category = response.data.result
         })

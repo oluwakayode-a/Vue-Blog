@@ -60,7 +60,7 @@ export default {
         }
     },
     created() {
-        axios.get("http://localhost:8000/categories")
+        axios.get("https://o-blog-api.herokuapp.com/categories")
         .then(response => {
             response.data.forEach(post => {
                 this.categories.push(post.name)
@@ -69,7 +69,7 @@ export default {
     },
     methods: {
         addPost() {
-            axios.post("http://localhost:8000/create/", {
+            axios.post("https://o-blog-api.herokuapp.com/create/", {
                 title: this.title,
                 content: this.content,
                 category: this.category
